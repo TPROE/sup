@@ -1,11 +1,6 @@
-% This is samplepaper.tex, a sample chapter demonstrating the
-% LLNCS macro package for Springer Computer Science proceedings;
-% Version 2.21 of 2022/01/12
-%
 % !TEX root = ./main.tex                             %WICHTIG FÜR VSCODE!!!!!!!!!!!!
 \documentclass[runningheads]{llncs}
-%\bibliography{bib file without .bib} % deprecated <- nicht auskommentieren
-%\addbibresource{literatur.bib}
+
 
 %
 \usepackage[T1]{fontenc}
@@ -14,37 +9,36 @@
 \usepackage{hyperref}
 \usepackage{color}
 %\renewcommand\UrlFont{\color{blue}\rmfamily}
-%
+
+
 \begin{document}
-%
+
+
 \title{Fahrgastüberwachung im ÖPNV}
-
 \author{Tim Pröpper}
+\institute{ Ostfalia Hochschule Wolfenbüttel, Am Exer 2, Wolfenbüttel, Braunschweig
+    \email{info@ostfalia.de}\\
+    \url{https://www.ostfalia.de}}
 
-\institute{ Ostfalia Hochschule Wolfenbüttel, Am Exer 2, Wolfenbüttel, Braunschweig}
-\begin{comment}
-\institute{Princeton University, Princeton NJ 08544, USA \and
-    Springer Heidelberg, Tiergartenstr. 17, 69121 Heidelberg, Germany
-    \email{lncs@springer.com}\\
-    \url{http://www.springer.com/gp/computer-science/lncs} \and
-    ABC Institute, Rupert-Karls-University Heidelberg, Heidelberg, Germany\\
-    \email{\{abc,lncs\}@uni-heidelberg.de}}
+{\def\addcontentsline#1#2#3{}\maketitle}            % typeset the header of the contribution
 
-\end{comment}
-\maketitle              % typeset the header of the contribution
-%
+
 \begin{abstract}
     The abstract should briefly summarize the contents of the paper in
     150--250 words.
 
-    \keywords{ÖPNV  \and Überwachung \and Privacy.}
+    \keywords{ÖPNV  \and Überwachung \and Datenschutz.}
 \end{abstract}
-%
-%
-%
 
-\include{Kapitel/1_Kapitel1.tex}
-\include{Kapitel/2_Kapitel2.tex}
+\setcounter{tocdepth}{2}
+\tableofcontents
+\setcounter{page}{0}
+\include{Kapitel/1_Einleitung.tex}
+\include{Kapitel/2_Ueberblick.tex}
+\include{Kapitel/3_Risikoidentifizierung.tex}
+\include{Kapitel/4_Privacy.tex}
+\include{Kapitel/5_Schluss.tex}
+
 
 \begin{thebibliography}{99}
     \bibitem{ref_article1}
