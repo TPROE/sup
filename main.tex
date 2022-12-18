@@ -1,0 +1,71 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.21 of 2022/01/12
+%
+% !TEX root = ./main.tex                             %WICHTIG FÜR VSCODE!!!!!!!!!!!!
+\documentclass[runningheads]{llncs}
+%\bibliography{bib file without .bib} % deprecated <- nicht auskommentieren
+%\addbibresource{literatur.bib}
+
+%
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{comment}
+\usepackage{hyperref}
+\usepackage{color}
+%\renewcommand\UrlFont{\color{blue}\rmfamily}
+%
+\begin{document}
+%
+\title{Fahrgastüberwachung im ÖPNV}
+
+\author{Tim Pröpper}
+
+\institute{ Ostfalia Hochschule Wolfenbüttel, Am Exer 2, Wolfenbüttel, Braunschweig}
+\begin{comment}
+\institute{Princeton University, Princeton NJ 08544, USA \and
+    Springer Heidelberg, Tiergartenstr. 17, 69121 Heidelberg, Germany
+    \email{lncs@springer.com}\\
+    \url{http://www.springer.com/gp/computer-science/lncs} \and
+    ABC Institute, Rupert-Karls-University Heidelberg, Heidelberg, Germany\\
+    \email{\{abc,lncs\}@uni-heidelberg.de}}
+
+\end{comment}
+\maketitle              % typeset the header of the contribution
+%
+\begin{abstract}
+    The abstract should briefly summarize the contents of the paper in
+    150--250 words.
+
+    \keywords{ÖPNV  \and Überwachung \and Privacy.}
+\end{abstract}
+%
+%
+%
+
+\include{Kapitel/1_Kapitel1.tex}
+\include{Kapitel/2_Kapitel2.tex}
+
+\begin{thebibliography}{99}
+    \bibitem{ref_article1}
+    Author, F.: Article title. Journal \textbf{2}(5), 99--110 (2016)
+
+    \bibitem{ref_lncs1}
+    Author, F., Author, S.: Title of a proceedings paper. In: Editor,
+    F., Editor, S. (eds.) CONFERENCE 2016, LNCS, vol. 9999, pp. 1--13.
+    Springer, Heidelberg (2016). \doi{10.10007/1234567890}
+
+    \bibitem{ref_book1}
+    Author, F., Author, S., Author, T.: Book title. 2nd edn. Publisher,
+    Location (1999)
+
+    \bibitem{ref_proc1}
+    Author, A.-B.: Contribution title. In: 9th International Proceedings
+    on Proceedings, pp. 1--2. Publisher, Location (2010)
+
+    \bibitem{ref_url1}
+    LNCS Homepage, \url{http://www.springer.com/lncs}. Last accessed 4
+    Oct 2017
+\end{thebibliography}
+
+\end{document}
