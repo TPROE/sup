@@ -8,13 +8,15 @@
 \usepackage{comment}
 \usepackage{hyperref}
 \usepackage{color}
+\usepackage{ngerman}
+
 %\renewcommand\UrlFont{\color{blue}\rmfamily}
 
 
 \begin{document}
 
 
-\title{Fahrgastüberwachung im ÖPNV}
+\title{Fahrgastüberwachung im Öffentlichen Personennahverkehr}
 \author{Tim Pröpper}
 \institute{ Ostfalia Hochschule Wolfenbüttel, Am Exer 2, Wolfenbüttel, Braunschweig
     \email{info@ostfalia.de}\\
@@ -24,8 +26,23 @@
 
 
 \begin{abstract}
-    The abstract should briefly summarize the contents of the paper in
-    150--250 words.
+    Die Ausarbeitung beschäftigt sich mit den Risiken für den Datenschutz und die Informationssicherheit im Umfeld des
+    Öffentlichen Personennahverkehrs.
+
+    Der Fokus liegt hierbei auf der Betrachtung des Systems bestehend aus Kameras und Mikrofonen
+    sowie der dahinterstehenden Architektur zur Verwaltung und potenziellen Auswertung. Hierfür wird zuerst ein Über\-blick über die komplette
+    Architektur sowie das rechtliche Umfeld gegeben und anschließend werden alle möglichen Risiken bezüglich Privacy und Security gegenübergestellt.
+
+    Es wird auf zwei konkrete Szenarien eingegangen:
+
+    1. Ein Security-Risiko, welchem unerlaubt auf die Netzwerkverbindung zugegriffen wird. Hieraus entstehen verschiedene Bedrohungen,
+    wie die Veröffentlichung oder Manipulation der Daten dieser Netzwerkverbin\-dung, oder auch das einfache Stören der Verbindung.
+    2. Ein Privacy-Risiko, in welchem auf Videoaufnahmen unerlaubterweise Personen eindeutig identifiziert und die Aufnahmen geteilt werden.
+
+    In diesen Szenarien wird der entstehende Schaden sowie beteiligte Komponenten dargestellt und anschließend werden zugehörige Maßnahmen erörtert.
+
+
+    136/ (150--250) words.
 
     \keywords{ÖPNV  \and Überwachung \and Datenschutz.}
 \end{abstract}
@@ -35,7 +52,7 @@
 \setcounter{page}{0}
 \include{Kapitel/1_Einleitung.tex}
 \include{Kapitel/2_Ueberblick.tex}
-\include{Kapitel/3_Risikoidentifizierung.tex}
+\include{Kapitel/3_Security.tex}
 \include{Kapitel/4_Privacy.tex}
 \include{Kapitel/5_Schluss.tex}
 
