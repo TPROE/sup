@@ -62,9 +62,11 @@ Um Maßnahmen abzuleiten, können die beeinträchtigten Schutzziele des Systems 
 zu erhöhen, kann eine Redundanz geschaffen werden. Wenn zwei voneinander getrennte Kommunikationskanäle existieren, wird es schwerer sein
 die Verbindung zu stören. Das Schutzziel der Verfügbarkeit wird somit bestärkt.
 
-Um das Schutzziel der Integrität zu bestärken, muss die Architektur des Systems verändert werden. Zum Einen kann das System grundlegend sicherer gemacht werden, zum Anderen kann auch
-die Sicherstellung der Integrität selbst gefördert werden. Eine Methode hierbei ist die Verwendung eines \glqq{}Secure Hash Algorithm\grqq{}, einem parametrisierten Hashverfahren.
+Um das Schutzziel der Integrität zu bestärken, muss die Architektur des Systems verändert werden. Eine Methode hierbei ist die Verwendung eines \glqq{}Secure Hash Algorithm\grqq{}, einem parametrisierten Hashverfahren.
 Der Hash wird vor dem Versenden aus den Eingabedaten und dem Shared key, einem Passwort welches nur der Sender und Empfänger kennen, berechnet. So kann der Empfänger anhand des Hash-Wertes überprüfen,
-ob die Nachricht manipuliert wurde, da in diesm Falle der Hash-Wert abweicht. Die Integrität der Daten ist somit sichergestellt.
+ob die Nachricht manipuliert wurde, da in diesem Falle der Hash-Wert abweicht. Die Integrität der Daten ist somit optimiert und die Manipulation der Daten kann so erkannt werden.
 
-Das Schutzziel der Vertraulichkeit setzt die Sicherung der Integrität der Daten voraus. Neben Secure Hashes können ebenfalls eine \glqq{}Public Key Infrastructure\grqq{} oder symmetrische Kryptographie verwendet werden.
+Um das Schutzziel der Vertraulichkeit zu gewährleisten, muss die Integrität der Daten gegeben sein. Essentiell für das Sicherstellen der Vertraulichkeit ist zudem eine Verschlüsselung. Da in einem Verkehrsbetrieb alle Akteure
+bekannt sind (Abschnitt \ref{abschnitt:technisch}: Eine Zentrale und mehrere Netzwerk-Switches in den Fahrzeugen/ Haltestellen), kann eine \glqq{}Public Key Infrastructure\grqq{} verwendet werden. In dieser gibt
+eine zentrale Stelle einen öffentlichen Schlüssel heraus, mit welchem die vielen kleinen Akteure ihre Daten verschlüsseln und an die Zentrale senden. Dort werden die Inhalte wieder mit einem private key entschlüsselt.
+Dieser Private Key ist im Gegensatz zum Public Key geheim und nicht außerhalb der Zentrale bekannt. Die Authentizität der Keys kann innerhalb des Verkehrsbetriebes sichergestellt werden.

@@ -16,9 +16,10 @@
 \begin{document}
 
 
-\title{Fahrgastüberwachung im Öffentlichen Personennahverkehr}
+\title{Fahrgastüberwachung Im Öffentlichen Personennahverkehr}
+\subtitle{Hausarbeit im Fach \glqq{}Security und Privacy\grqq{}.\\Dozentin: Prof. Dr. Ina Schiering}
 \author{Tim Pröpper}
-\institute{ Ostfalia Hochschule Wolfenbüttel, Am Exer 2, Wolfenbüttel, Braunschweig
+\institute{ Ostfalia Hochschule Wolfenbüttel, Am Exer 2, Wolfenbüttel
     \email{info@ostfalia.de}\\
     \url{https://www.ostfalia.de}}
 
@@ -26,24 +27,21 @@
 
 
 \begin{abstract}
-    Die Ausarbeitung beschäftigt sich mit den Risiken für den Datenschutz und die Informationssicherheit im Umfeld des
-    Öffentlichen Personennahverkehrs.
+    Die Ausarbeitung beschäftigt sich mit den Risiken für den Datenschutz und die Informationssicherheit bei der Fahrgastüberwachung im Umfeld des
+    Öffentlichen Personennahverkehrs (ÖPNV).
 
-    Der Fokus liegt hierbei auf der Betrachtung des Systems bestehend aus Kameras und Mikrofonen
-    sowie der dahinterstehenden Architektur zur Verwaltung und potenziellen Auswertung. Hierfür wird zuerst ein Über\-blick über die komplette
-    Architektur sowie das rechtliche Umfeld gegeben und anschließend werden alle möglichen Risiken bezüglich Privacy und Security gegenübergestellt.
+    Im ÖPNV werden mehrere Videokameras pro Fahrzeug verwendet, welche über einen Netzwerkswitch verbunden und über das Internet an eine zentrale Stelle des Verkehrsbetriebes gesendet werden.
+    Dort werden die Videos temporär gespeichert und es gibt die Möglichkeit zur \glqq{}Live-Ansicht\grqq{}.
 
-    Es wird auf zwei konkrete Szenarien eingegangen:
+    Die rechtliche Grundlage der Überwachung ist gegeben durch
+    §4 Bundesdatenschutzgesetz Abs. 1 S. 2 \glqq{}Videoüberwachung öffentlich zugänglicher Räume\grqq{} sowie Art. 6 Datenschutzgrundverordnung.
 
-    1. Ein Security-Risiko, welchem unerlaubt auf die Netzwerkverbindung zugegriffen wird. Hieraus entstehen verschiedene Bedrohungen,
-    wie die Veröffentlichung oder Manipulation der Daten dieser Netzwerkverbin\-dung, oder auch das einfache Stören der Verbindung.
-    2. Ein Privacy-Risiko, in welchem auf Videoaufnahmen unerlaubterweise Personen eindeutig identifiziert und die Aufnahmen geteilt werden.
+    Durch die Netzwerkverbindung vieler Geräte im öffentlichen Raum entsteht ein hohes technisches Risiko für die Informationssicherheit, da der Zugriff von vielen Orten aus und ungestört über einen
+    längeren Zeitraum möglich ist. Falls sich unerlaubt Zugriff auf die Netzwerkverbindung geschaffen wird, können die Daten veröffentlicht, manipuliert oder die Verbindung gestört werden.
+    Um dies zu vermeiden, ist als Maßnahme eine Verschlüsselung der Verbindung zu empfehlen.
 
-    In diesen Szenarien wird der entstehende Schaden sowie beteiligte Komponenten dargestellt und anschließend werden zugehörige Maßnahmen erörtert.
-
-
-    136/ (150--250) words.
-
+    Ein Risiko für den Datenschutz besteht unter anderem durch die in der Zentrale arbeitenden Personen, welche Personen gewollt oder ungewollt identifizieren können. Um dem vorzubeugen, sind
+    organisatorische Maßnahmen zur Sensibilisierung der Mitarbeiter zu empfehlen.
     \keywords{ÖPNV  \and Überwachung \and Datenschutz.}
 \end{abstract}
 

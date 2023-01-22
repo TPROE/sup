@@ -1,11 +1,13 @@
 \section{Übersicht}
 %In diesem Kapitel wird das Umfeld 
-\subsection{Einsatzgebiet} %weg?
+\subsection{Abgrenzung des Begriffes} %weg?
 Öffentlicher Personennahverkehr bezeichnet den \glqq{}räumlichen Bereich zur Beförderung von Personen im Berufs-,
 Ausbildungs-, Einkaufs- und sonstigen alltäglichen Verkehr mit Fahrzeugen des Straßen-, Schienen- und Schiffsverkehrs (Fähren) im Linienverkehr.
 \grqq{} \cite{Dr.FriedrichvonStackelbergDr.RobertMalina.2018}
-Die Einsatzgebiete von Fahrgastüberwachung betreffen alle dem entsprechenden Verkehrsbetrieb zugehörigen Gebiete, in welchen sich Personen aufhalten.
-Dies umfasst also die Haltestellen sowie die Verkehrsmittel selbst.
+
+Die Fahrgastüberwachung beschreibt die Maßnahmen, welche zur Aufzeichnung aller dem entsprechenden Verkehrsbetrieb zugehörigen Gebiete, in welchen sich Personen aufhalten, dienen.
+Die Einsatzgebiete umfassen also die Haltestellen sowie, (Bus-)Bahnhöfe die Verkehrsmittel selbst.
+
 
 
 \subsection{Rechtliche Rahmenbedingungen}
@@ -41,24 +43,27 @@ Ebenfalls die Fahrgastüberwachung betreffend ist die europäische Datenschutzgr
 
 \newpage
 \subsection{Technischer Hintergrund}
+\label{abschnitt:technisch}
 In Abbildung~\ref{fig:architektur} wird der Aufbau einer typischen Überwachungseinrichtung im ÖPNV dargestellt. Hierbei wird unterschieden zwischen dem lokalen Aufbau, der an den Fahrzeugen und Haltestellen
 anzufinden ist. Über ein Netzwerk ist jedes lokale System mit der zentralen Leitstelle verbunden.
 
 Ein lokales System hat in der Regel mehrere Kameras (analog oder digital) verbaut. Das Bild der älteren, meist analogen Kameras muss vor Anbindung an das Netzwerk digitalisiert werden.
-Optional in den lokalen System sind eine Anzeige für z.B. den Fahrer des Busses, sowie Mikrofone, welche in den Kameras integriert sein können.
+Optional in den lokalen System sind eine Anzeige für z.B. den Fahrer des Busses, sowie Mikrofone, welche in den Kameras integriert sein können \cite{Reuter.12.02.2019}.
+% z.B. den Fahrer des Busses. Da in Kameras teilweise Mikrofone integriert sind, können diese nicht ausgeschlossen werden.
 
 In der zentralen Verwaltung stehen die Server, welche die Videoaufnahmen verwalten sowie das \glqq{}Langzeit-Archiv\grqq{}. In diesem werden die Aufnahmen bis zur Löschung aufbewahrt.
 Über den Dauer bis zur Löschung der Daten heißt bisher Uneinigkeit, gemäß § 27 Bundespolizeigesetz (BPolG) ist eine Speicherung von bis zu 30 Tagen zulässig. In  §6b Abs. 5 BDSG
 steht dem die unweigerliche Löschung der Daten gegenüber. In der \glqq{}Orientierungshilfe zur Videoüberwachung\grqq{} der Datenschutzbeauftragten von Niedersachsen wird final eine maximale
 Speicherdauer von 48 Stunden angegeben\cite{DanielaWindelband.20.April2016}. Neben der Darstellung der Videos sind auch technische Möglichkeiten zur Auswertung der Videos geschaffen.
-Auswertung umfasst nicht automatisch die automatische Analyse der Daten, sondern beschreibt vielmehr das Betrachten und Beurteilen dieser durch einen Mitarbeiter.
-
+Auswertung umfasst nicht automatisch die automatische Analyse der Daten, sondern beschreibt vielmehr das Betrachten und Beurteilen dieser durch einen Mitarbeiter. In der zentralen Leitstelle, von welcher aus der
+Fahrbetrieb geregelt wird, sind häufig auch die Anzeigen der Überwachungskameras.
 \begin{figure}[ht]
     \begin{center}
         \includegraphics[width= 1\textwidth]{Bilder/architektur.png}
-        \caption{Aufbau eines typischen Systems \cite{LandesbeauftragtefurdenDatenschutzBadenWurttemberg.2015}}
+        \caption{Aufbau eines typischen Systems nach \cite{LandesbeauftragtefurdenDatenschutzBadenWurttemberg.2015}}
         \label{fig:architektur}
     \end{center}
 \end{figure}
+
 Die genaue Implementierung eines Systems kann abweichen, wichtig zur Betrachtung der Risiken im Bereich von Datenschutz und IT-Sicherheit
 sind aber die Aspekte der Datenübertragung über ein Netzwerk, die Leitstelle, temporäre Speicherung und die Möglichkeit zum mobilen Zugang zum System.
